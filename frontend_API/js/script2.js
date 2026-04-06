@@ -30,9 +30,9 @@ async function getWeather() {
         document.getElementById("temp").innerHTML = Math.round(data.main.temp) + "°C";
         document.getElementById("description").innerHTML = data.weather[0].description;
 
-        if (data.weather[0].description === "nuageux") {
+        if (data.weather[0].description === "nuageux" || data.weather[0].description === "partiellement nuageux") {
             document.body.style.backgroundImage = 'url("../image/nuage.jpeg")'
-            document.body.style.backgroundPosition = 'cneter'
+            document.body.style.backgroundPosition = 'center'
             document.body.style.backgroundAttachmen = 'fixed';
             document.body.style.backgroundRepeat = 'no-repeat'
         }else if(data.weather[0].description === "orage"){

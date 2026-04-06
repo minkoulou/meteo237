@@ -16,7 +16,7 @@ function rechercherville() {
     }
 
     // redirection vers la page d'affichage
-    window.location.href = `affichage.html?ville=${encodeURIComponent(ville)}`;
+    window.location.href = `./html/affichage.html?ville=${encodeURIComponent(ville)}`;
 }
  
 // ============================================
