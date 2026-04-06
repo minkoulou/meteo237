@@ -35,3 +35,34 @@
      100%{transform: translateX(-100%);}
   
 } */
+
+@keyframes slideRightFade {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideLeftFade {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-right {
+  animation: slideRightFade 1s ease forwards;
+}
+
+.animate-left {
+  animation: slideLeftFade 1s ease forwards;
+  animation-delay: 0.5s; /* petit décalage stylé */
+}

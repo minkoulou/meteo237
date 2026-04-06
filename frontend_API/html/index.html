@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description"
+            content="ce site est une application web de météo permettant de voir le climat dans un lieu donné">
+        <meta property="og:title" content="App Météo Cameroun">
+        <meta property="og:description" content="Regarde la météo en temps réel sur ton téléphone.">
+        <meta property="og:image" content="../image/Weather.jpeg">
+        <!-- <meta property="og:url" content=""> -->
+        <meta property="og:type" content="website">
+
+        <link rel="shortcut icon" href="../image/Weather.jpeg" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css2?family=Montaga&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=DM+Sans:wght@300;400;500&display=swap"
+            rel="stylesheet" />
+            <title>accueil_meteo</title>
+    </head>
+
+<body
+    class="w-full h-screen bg-no-repeat bg-cover bg-[url('../image/ciel.jpg')] bg-top font-[montaga] overflow-x-hidden"
+    id="corps">
+    <div class="w-full bg-white flex h-[5vh] items-center justify-between px-4">
+ 
+        <h1 class="w-fit bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-blue-200 font-bold text-2xl cursor-pointer"
+            id="meteo">
+            METEO 237
+        </h1>
+ 
+        <a href="../html/formulaire.html" class="sm:block text-blue-700 font-semibold text-xl hover:text-red-700 hidden">
+            Vos avis
+        </a>
+ 
+        <!-- affichage de la liste deroulante du hamburger menu -->
+        <div id="menu-mobile" class="sm:hidden absolute top-[5vh] left-60 w-full bg-white shadow-md z-50">
+            <a href="../html/formulaire.html"
+                class="block px-6 py-4 text-gray-700 hover:bg-blue-50 hover:text-blue-700 border-b border-gray-100 text-sm">
+                Vos avis
+            </a>
+        </div>
+ 
+        <!-- Bouton hamburger visible sur mobile -->
+        <button id="hamburger" class="sm:hidden flex flex-col gap-1.5 cursor-pointer p-2">
+            <span class="ham-line block w-6 h-0.5 bg-blue-700 transition-all duration-300"></span>
+            <span class="ham-line block w-6 h-0.5 bg-blue-700 transition-all duration-300"></span>
+            <span class="ham-line block w-6 h-0.5 bg-blue-700 transition-all duration-300"></span>
+        </button>
+ 
+    </div>
+
+    <!-- CONTENU PRINCIPAL -->
+    <div class="mt-24 sm:mt-48">
+        <div class="flex flex-col items-center justify-center gap-4 sm:gap-8">
+
+            <!-- Titre -->
+            <h1 class="text-white text-wrap text-4xl sm:text-6xl md:text-7xl font-bold text-center w-[80%]">
+                Trouver la Météo d'une ville
+            </h1>
+
+            <!-- Texte animé -->
+            <div class="text-center overflow-hidden">
+                <p class="text-[--text-color] text-xl sm:text-4xl font-semibold" >
+                    <span class="inline-block animate-right" id="text1">Saisissez le nom d'une ville</span>
+                    <span class="inline-block animate-left" id="text2">pour afficher les prévisions actuelles</span>
+                </p>
+            </div>
+
+            <!-- Input avec icône -->
+            <div class="relative pl-4">
+                <input type="text" placeholder="Rechercher..."
+                    class="bg-[--bg-color] border w-[90vw] h-[5vh] sm:w-[52vw] sm:h-[5vh] rounded-full pl-4 outline-blue-200 border-white"
+                    id="Search">
+                <i class="fa-brands fa-sistrix -translate-x-8 text-gray-500 active:bg-black rounded-full opacity-90"
+                    id="icon"></i>
+            </div>
+
+            <!-- Bouton recherche -->
+            <button type="button"
+                class="w-[30%] h-[5vh] sm:w-[10%] border rounded-xl bg-blue-700 text-white font-bold hover:scale-105 cursor-pointer"
+                id="btn">
+                Search
+            </button>
+
+             </div>
+    </div>
+ 
+
+            <script src="../js/script.js"></script>
+</body>
+
+</html>
